@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* CTRL+; faz o comando do comentario */
+  .cabecao {
+    background-color: rgb(0, 0, 143);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  /* Toda essa parte do header se refere ao cabeçalho na parte vermelha */
+  .cabecao button {
+    padding: 10px 5px;
+  }
+  
+  .cabecao button:active {
+    background-color: rgb(0, 0, 143);
+    color: rgb(0, 0, 0);
+  }
+  /* Aqui se refere a parte dos botões na parte do cabeçalho */
+  .cabecao .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /* Aqui se refere a parte do botão q desce */
+  .cabecao .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 100px;
+    z-index: 1;
+  }
+  /* Aqui se refere ao texto q desce */
+  .cabecao .dropdown-content a {
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  /* aqui é a organização das colunas */
+  .cabecao .dropdown:active .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+  }
+  
+  .container {
+    display: flex;
+  }
+  /* Aqui se refere a parte do meio azul */
+  .barralateral {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    background-color: rgb(0, 0, 143);
+    width: 20vw;
+    height: 1200px;
+  }
+  /* Aqui se refere a parte de baixo verde */
+  .botao {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+  }
+  
+  .botao:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+  }
+  .content {
+    background-color: #787878;
+    width: 80vw;
+    height: 1200px;
+  }
+  /* responsividade */
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  /* preenchimento dos menus */
+    .barralateral {
+      width: 100%;
+      height: fit-content;
+    }
+  
+    .content {
+      width: 100%;
+    }
+  }
+  /* Bolinha de carregamento */
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgb(0, 0, 143);
+    border-bottom-color: rgb(209, 209, 25);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  /* Nessa parte de cima esta especificado como deve ser a bola de 
+  carregamento */
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+  /* Aqui eu deixei o loopin da animação definido descrevendo posição 
+  inicial e final da rotação */
+    }
+  }
+  h1{
+    color: rgb(0, 0, 143);
+  }
+  h2 {
+    color: rgb(209, 209, 25);
+  }
+  p{
+    color: white;
+  }
